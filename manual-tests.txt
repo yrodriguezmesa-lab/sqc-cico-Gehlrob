@@ -62,3 +62,21 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 * Should display "Developer" for the user name.
 
 
+# Module 5 Ticket 501: Implement "Done" button on sign in/sign out
+
+## Test steps
+1. Build and run CiCo.
+2. Enter 00000000 into field and click Update.
+
+## Expected results
+* Should display "Developer" and either "Checked In" or "Checked Out"
+
+# Intended Fix results
+
+## Test steps
+1. Build and run CiCo.
+2. Enter 00000000 into field and click Update.
+
+## Expected results
+* Should display "Developer" and either "Checked In" or "Checked Out"
+* Added button should allow the timeout to be skipped so the next employee can log in without waiting

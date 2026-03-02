@@ -31,6 +31,7 @@ public class Main {
   // Timeouts. Note the units.
   private static final long TIMEOUT_PANEL_MS = 10 * 1000;
   private static final int TIMEOUT_STATEMENT_S = 5;
+  private static JButton doneButton;
 
   // Internal classes ///////////////////////////////////////////////////////////
   // InputFilter manages user input to the card number field.
@@ -150,7 +151,7 @@ public class Main {
         }
 
         updateStateLabels(name, currentState == 1);
-        scheduleTransitionFrom(CARD_STATE, null);
+        scheduleTransitionFrom(CARD_STATE, doneButton);
       }
       else {
         showError(ERROR_NOT_FOUND);
@@ -275,6 +276,11 @@ public class Main {
     panelStatus.setPreferredSize(new Dimension(640, 480));
     panelStatus.setMaximumSize(new Dimension(640, 480));
     panelStatus.setBackground(Color.blue);
+    
+    JButton doneButton = new JButton("Done");
+    doneButton.addActionListener(handler);
+    doneButton.setAlignmentX(JComponent.CENTER_ALIGNMENT);
+    panelStatus.add(doneButton);
 
     panelStatus.add(Box.createVerticalGlue());
     labelUser = new JLabel("Registrant", JLabel.LEADING);
