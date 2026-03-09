@@ -80,3 +80,17 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 ## Expected results
 * Should display "Developer" and either "Checked In" or "Checked Out"
 * Added button should allow the timeout to be skipped so the next employee can log in without waiting
+
+# Module 6: Unit testing and responding to PRs
+# 6-8. CiCo: Create a functional pull request: Ticket 602
+
+## Test steps
+1. Build and run CiCo.
+2. Observe the main panel colors.
+3. Enter 00000000 into the field and click Update.
+4. Observe the status panel colors.
+5. Enter 99999999 into the field and click Update.
+6. Observe the error panel colors.
+
+## Expected Results
+* The application should display a professional and neutral color on each panel
